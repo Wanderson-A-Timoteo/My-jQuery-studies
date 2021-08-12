@@ -13,8 +13,10 @@
 
 </head>
 <body>
-	<h1>Selecionando Elementos</h1>
-	<h3>Seletores e Filtros</h3>
+	<div id="area">
+		<h1>Selecionando Elementos</h1>
+		<h3>Seletores e Filtros</h3>
+	</div>
 
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -40,7 +42,7 @@
 		<li>Wanderson</li>
 		<li>Jeane</li>
 		<li>Ryan</li>
-		<li>Dog</li>
+		<li style="display: nome;">Dog</li>
 		<li>Rosangela</li>
 		<li>Elizangela</li>
 		<li>Wendrew Nick</li>
@@ -51,7 +53,7 @@
 	<ul id="lista-frutas">
 		<li>Pera</li>
 		<li>Uva</li>
-		<li ativo="sim">Maça</li>
+		<li>Maça</li>
 		<li>Banana</li>
 		<li>Morango</li>
 		<li>Abacaxi</li>
@@ -115,9 +117,50 @@
 
 
 			//Podemos encadear metodos separando após o ponto parauma melhor organização
-			$('h1')
-				.css('color', 'white')
-				.addClass('destaque')  
+			//$('h1')
+			//	.css('color', 'white')
+			//	.addClass('destaque') 
+
+
+			/* Seletores esclusivos jQuery (Filtros) */ 
+			// Podemos usar todos os seletores do CSS, porém existem alguns seletores exclusivos do jQuery
+
+			// Seleciona todos os elementos li do lista ul
+			//$('ul li').addClass('destaque')
+
+			//Para selecionar apenas o primeiro elemento da lista, se tiver mais de 1 lista ele pegará apenas o primeiro elemento da primeira lista.
+			//$('ul li:first').addClass('destaque')
+
+			//Para selecionar apenas o ultimo elemento da lista, se tiver mais de 1 lista ele pegará apenas o ultimo elemento da ultima lista.
+			//$('ul li:last').addClass('destaque')
+
+
+			//Para selecionar um elemento especifico da lista usamos eq() para selecionar "igual" ao indice, podemos percorrer pelo indice do elemento num array, se tiver mais de 1 lista ele percorrerá todas as listas e cada li corresponderá a um elemento no contador, ou seja se na primeira lista tiver 3 elementos e na segunda lista 5 elemenros, ele percorrerá de 0 a 2 na primeira e continuará na segunda de 3 a 7.
+			//$('ul li:eq(14)').addClass('destaque')
+
+			//Para selecionar um elemento da lista, parecido com eq() usamos gt() para selecionar "maior que" indice, assim definimos pelo indice quais elementos serão selecionados a partir do indice.
+			//$('ul li:gt(10)').addClass('destaque')
+
+			//Para selecionar um elemento da lista, parecido com gt(), usamos lt() para selecionar "menor do que" indice, assim definimos pelo indice quais elementos serão selecionados a partir do indice.
+			//$('ul li:lt(6)').addClass('destaque')
+
+			// Para selecionar de forma zebrada alternando de elementos como se estivesse tabulando, marcando uma li, pula uma e marca a proxima li e assim por diante. Dessa forma ele marcará todas as listas a menos que especifiquemos qual lista desejamos tabelar.
+			//$('ul li:odd').addClass('destaque')
+
+			// Podemos selecionar cabeçalho, desta forma ele selecionará todos os h1, h2, h3, h4, h5, h6
+			//$(':header').addClass('destaque')
+
+			// Podemos selecionar cabeçalho, especificando qual deve ser selecionado pelo id, neste caso precsamos colocar um espaço entre o id e o metodo
+			//$('#area :header').addClass('destaque')
+
+			// Podemos ocultar um elemento com hidden
+			//$('#lista-nomes :hidden')
+
+			// Podemos mostrar um elemento que esteja oculto hidden com metodo show()
+			//$('ul li:hidden').show()
+
+			//Podemos utilizar o metodo contains() para selecionar tudos os elementos que contenha o que estamos pesquisando, ele tb diferencia letras maiusculas e minusculas
+			//$('ul li:contains("an")').addClass('destaque')
 
 		})
 	</script>
