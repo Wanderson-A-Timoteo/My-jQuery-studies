@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+
+	<title>jQuery</title>
+
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+	<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+	<h1>Selecionando Elementos</h1>
+	<h3>Seletores e Filtros</h3>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<br>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<br>
+
+	<h3>Lista de Nomes</h3>
+	<ul id="lista-nomes">
+		<li>Wanderson</li>
+		<li>Jeane</li>
+		<li>Ryan</li>
+		<li>Dog</li>
+		<li>Rosangela</li>
+		<li>Elizangela</li>
+		<li>Wendrew Nick</li>
+		<li>Maria Eduarda</li>
+	</ul>
+
+	<h3>Lista de Frutas</h3>
+	<ul id="lista-frutas">
+		<li>Pera</li>
+		<li>Uva</li>
+		<li ativo="sim">Maça</li>
+		<li>Banana</li>
+		<li>Morango</li>
+		<li>Abacaxi</li>
+		<li>Melancia</li>
+		<li>Maracuja</li>
+	</ul>
+
+	<!--<div id="conteudo" class="destaque">Conteudo</div>-->
+
+	<div id="conteudo">Conteudo</div>
+
+
+	<button acao-clique>Clique</button>
+
+	<script type="text/javascript">
+		// Seleciona um objeto usando a função jQuery, passando o seletor ul e li para retornar o objeto
+		//const obj = jQuery('ul li')
+		// Para ver o objeto é só abrir a página e conferir em inspecionar o código o console
+		//console.log(obj)
+
+		// Seleciona um objeto de forma reduzida usando apenas o simbolo do dolar, esta é a forma mais usada.
+		// passando o seletor neste caso h1 para retornar o objeto 
+		//const obj = $('h1')
+		//console.log(obj)
+
+		
+		$('[acao-clique]').click(function(){
+			// Seleciona o seletor por id usando # então podemos acessar os metodos, neste caso addClass()
+			// Neste caso é aplicado o css de classe destaque quando clicado no botão
+			//$('#conteudo').addClass('destaque')
+
+			// Neste caso remove a classe destaque quando clique
+			//$('#conteudo').removeClass('destaque')
+
+			// Adiciona destaque na lista, ou seja na ul e na li, quando clique
+			//$('ul').addClass('destaque')
+
+			// adiciona destaque apenas na li que tem a ul com id=lista
+			//$('ul#lista-nomes li').addClass('destaque')
+
+			// adiciona destaque ao seletor h1
+			//$('h1').addClass('destaque')
+
+			//Selecionar por atributo neste caso [acao-clique] e adiciona destaque, 
+			//sendo assim aplicará no botão o destaque
+			//$('[acao-clique]').addClass('destaque')
+
+			//Podemos selecionar baseado no valor de um atributo
+			// Neste caso adiconará destaque apenas nos atributos de nome "ativo" que tenha o valor "sim".
+			//$('[ativo="sim"]').addClass('destaque')
+
+			// Seletor universal * adicionará destaque a todos os elementos html
+			//$('*').addClass('destaque')
+
+			
+			//Podemos encadear metodos
+			// primeiro colocamos a propriedade e em seguida o seu valor. 
+			//no caso do valor css podemos passar o código decimal por exemplo: #0000  
+			// Encadeamos adicionando tb a classe destaque
+			//$('h1').css('color', 'white').addClass('destaque')
+
+
+			//Podemos encadear metodos separando após o ponto parauma melhor organização
+			$('h1')
+				.css('color', 'white')
+				.addClass('destaque')  
+
+		})
+	</script>
+</body>
+</html>
