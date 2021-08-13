@@ -27,7 +27,7 @@
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</p>
 	<br>
-	<p>
+	<p style="display:none">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -49,8 +49,8 @@
 		<li>Maria Eduarda</li>
 	</ul>
 
-	<h3>Lista de Frutas</h3>
-	<ul id="lista-frutas">
+	<h3 style="display:none">Lista de Frutas</h3>
+	<ul style="display:none" id="lista-frutas">
 		<li>Pera</li>
 		<li>Uva</li>
 		<li>Maça</li>
@@ -63,7 +63,18 @@
 
 	<!--<div id="conteudo" class="destaque">Conteudo</div>-->
 
-	<div id="conteudo">Conteudo</div>
+	<h3>Formulário</h3>
+	<form id="cadastro">
+		<input type="text" placeholder="Nome">
+		<input type="password" placeholder="Senha">
+		<hr>
+		<input type="radio">
+		<input type="checkbox">
+		<hr>
+		<input type="submit" value="Salvar">
+	</form>
+
+	<div style="display:none" id="conteudo">Conteudo</div>
 
 
 	<button acao-clique>Clique</button>
@@ -122,7 +133,7 @@
 			//	.addClass('destaque') 
 
 
-			/* Seletores esclusivos jQuery (Filtros) */ 
+			/* Seletores exclusivos jQuery (Filtros) */ 
 			// Podemos usar todos os seletores do CSS, porém existem alguns seletores exclusivos do jQuery
 
 			// Seleciona todos os elementos li do lista ul
@@ -161,6 +172,39 @@
 
 			//Podemos utilizar o metodo contains() para selecionar tudos os elementos que contenha o que estamos pesquisando, ele tb diferencia letras maiusculas e minusculas
 			//$('ul li:contains("an")').addClass('destaque')
+
+
+
+			/* Filtros de formularios */
+
+			// Para ocultar todos os input do código, button tb é considerado um input por isso todos button tb serão ocultos
+			//$(':input').hide()
+
+
+			// Para ocultar apenas os inputs do formulario
+			//$('form :input').hide()
+
+			// Para ocultar ou para aparecer um input do form usamos toggle()
+			//$('form :input').toggle()
+
+			// Para ocultar ou para aparecer um text do form usamos toggle()
+			//$('form :text').toggle()
+
+			// Para ocultar ou para aparecer um password do form usamos toggle()
+			//$('form :password').toggle()
+
+			// Para ocultar ou para aparecer um radio do form usamos toggle()
+			//$('form :radio').toggle()
+
+			// Para ocultar ou para aparecer um checkbox do form usamos toggle()
+			//$('form :checkbox').toggle()
+
+			// Para ocultar ou para aparecer um submit do form usamos toggle()
+			//$('form :submit').toggle()
+
+
+
+
 
 		})
 	</script>
